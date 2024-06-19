@@ -39,3 +39,11 @@ fn add_two(argument: Int, passed_function: fn(Int) -> Int) -> Int {
 fn add_one(argument: Int) -> Int {
   argument + 1
 }
+
+pub fn fibonacci(a: Int) -> Int {
+  case a {
+    0 -> 0
+    1 -> 1
+    _ -> fibonacci(a - 1) + fibonacci(a - 2)
+  }
+}
